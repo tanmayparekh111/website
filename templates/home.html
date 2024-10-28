@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select Service</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #6d1010;
+        }
+        h1 {
+            margin-bottom: 20px;
+            color: white;
+        }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            background-color: #c0392b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #a93226;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Success Sure</h1>
+    <h1>Select a Service</h1>
+    <button onclick="window.location.href='/selected_service/indexes';">LTP for indexes</button>
+    <button onclick="alert('CMP of Nifty 50 stocks selected!')">CMP of Nifty 50's Stocks</button>
+    <button onclick="alert('CMP of a particular OI selected!')">CMP of Any Particular OI</button>
+    <button onclick="alert('Live Option Chain selected!')">Live Option Chain</button>
+    <button onclick="window.location.href='/selected_service/powerbi';">Power BI Visualization Testing</button>
+</body>
+</html>

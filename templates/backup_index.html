@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Indexes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+            background-color: #6d1010;
+            color: white;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid white;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #c0392b;
+        }
+    </style>
+    <script>
+        async function fetchLatestTicks() {
+            const response = await fetch('/api/latest_ticks');
+            const data = await response.json();
+    
+            document.getElementById('nifty').innerText = data.nifty.value || 'N/A';
+            document.getElementById('nifty-timestamp').innerText = data.nifty.timestamp || 'N/A';
+            document.getElementById('banknifty').innerText = data.banknifty.value || 'N/A';
+            document.getElementById('banknifty-timestamp').innerText = data.banknifty.timestamp || 'N/A';
+            document.getElementById('finnifty').innerText = data.finnifty.value || 'N/A';
+            document.getElementById('finnifty-timestamp').innerText = data.finnifty.timestamp || 'N/A';
+        }
+    
+        setInterval(fetchLatestTicks, 1000); // Fetch every 1 second
+    </script>
+</head>
+<body>
+    <h1>Live Market Data</h1>
+    <table>
+        <tr>
+            <th>Index</th>
+            <th>Latest Value</th>
+            <th>Timestamp</th>
+        </tr>
+        <tr>
+            <td>Nifty</td>
+            <td id="nifty">Loading...</td>
+            <td id="nifty-timestamp">Loading...</td>
+        </tr>
+        <tr>
+            <td>Bank Nifty</td>
+            <td id="banknifty">Loading...</td>
+            <td id="banknifty-timestamp">Loading...</td>
+        </tr>
+        <tr>
+            <td>Fin Nifty</td>
+            <td id="finnifty">Loading...</td>
+            <td id="finnifty-timestamp">Loading...</td>
+        </tr>
+    </table>
+</body>
+</html>
