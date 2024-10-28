@@ -15,8 +15,13 @@ Tips
 ->make sure that you have ngrok installed in your system.
 ->also suitable python version should be used(here i have used python 3.7).
 ->postgres database is used with the pgadmin interface
+->to host the database you need to change to file in the postgres folder end with .conf.(ask chatgpt what to change there)
+1) edit the postgresql.conf, add the listen_address = '*'
+2) edit the pg_hba.conf, add the all 0.0.0.0/0 ms5 there.
+3) press win + R control, enter, go to security > windows defender wall
+on lest side inbound rules if no tcp  is with 5432, tyhen add it bu add new rule and add it.
 ->Make sure that you have made your databse as a global so that anyone with having good creds can use it
-i have made my local as host, and password databasename, and username are ***
+i have made my local as host, and password databasename, and username are ****.
 
 feel free to contact me for any help or suggestion.
 
