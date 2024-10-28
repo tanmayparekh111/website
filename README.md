@@ -16,7 +16,7 @@ Tips
 ->also suitable python version should be used(here i have used python 3.7).
 ->postgres database is used with the pgadmin interface
 ->Make sure that you have made your databse as a global so that anyone with having good creds can use it
-i have made my local as host, and password databasename, and username are `postgres`.
+i have made my local as host, and password databasename, and username are ***
 
 feel free to contact me for any help or suggestion.
 
